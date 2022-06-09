@@ -1,6 +1,19 @@
-const getMagicNamber = function(userNumber = 5, magicNumber = 10){
-  let userNumber = Number(prompt('Think of a number from 1 to 10 and write it down here'));
-  if (userNumber === !isNaN(Number)||userNumber === ''||userNumber === null){
-    console.log ('It is not a number. Try again');
-  } 
+const magicNumber = 5;
+
+while (true) {
+  const userNumber = Number(prompt("Enter number in 1 for 10"));
+  if (userNumber === magicNumber) {
+    console.log(" Yes! You plassed!");
+    break;
+  }
+  if ( userNumber === "" || 
+       isNaN(userNumber) || 
+       userNumber === 0) {
+    console.log("Is not number");
+  } else if (userNumber < magicNumber) {
+    console.log("The number is greater");
+  } else if (userNumber > magicNumber) {
+    console.log("The number is less");
+  }
+  console.log("try again");
 }
